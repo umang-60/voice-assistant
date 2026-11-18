@@ -5,8 +5,30 @@ import webbrowser
 import datetime
 import time
 import logging
-import keyboard  # run: pip install keyboard
 import keyboard as kb
+import requests
+def ask_ollama(prompt):
+    """Sends a prompt to the local Ollama server and returns the answer."""
+    logging.info(f"🧠 Asking Ollama: {prompt}")
+    try:
+        # Ollama's API endpoint
+        url = "http://localhost:11434/api/generate"
+        payload = {
+            "model": "llama3.2",
+            "prompt": prompt,
+            "stream": False  # We want the full answer at once
+        }
+        # Give it a generous timeout in case the model is slow to load
+        response = requests.post(url, json=payload, timeout=60)
+        response.raise_for_status()
+        
+        data = response.json()
+        answer = data.get("response", "").strip()
+        return answer if answer else "I couldn't think of an answer."
+        
+    except Exception as e:
+        logging.error(f"Ollama Error: {e}")
+        return "Sorry, my local AI brain seems to be offline."
 logging.basicConfig(
     filename="assistant.log",
     level=logging.INFO,
@@ -254,34 +276,19 @@ def handle_command(command):
             speak(random.choice(openers))
             webbrowser.open(WEBSITES[matched])
     elif "joke" in command:
-        import requests
-        try:
-            # Free joke API — returns a random joke
-            r = requests.get(
-                "https://official-joke-api.appspot.com/random_joke",
-                timeout=5
-            )
-            data = r.json()
-            setup = data.get("setup", "")
-            punchline = data.get("punchline", "")
-            if setup and punchline:
-                speak(setup)
-                time.sleep(1.5)   # dramatic pause
-                speak(punchline)
-            else:
-                speak("I couldn't find a good joke right now.")
-        except Exception as e:
-            logging.error(f"Joke API error: {e}")
-            # Fallback: local jokes if API fails
-            import random
-            fallback_jokes = [
-                "Why do programmers prefer dark mode? Because light attracts bugs.",
-                "Why did the Python developer go broke? Because he used up all his cache.",
-                "There are 10 types of people: those who understand binary and those who don't.",
-                "A SQL query walks into a bar, walks up to two tables and asks: Can I join you?",
-                "Why do Java developers wear glasses? Because they don't C sharp.",
-            ]
-            speak(random.choice(fallback_jokes))
+        import random
+        jokes = [
+            "Why do programmers prefer dark mode? Because light attracts bugs.",
+            "Why did the Python developer go broke? Because he used up all his cache.",
+            "There are 10 types of people: those who understand binary and those who don't.",
+            "A SQL query walks into a bar, walks up to two tables and asks: Can I join you?",
+            "Why do Java developers wear glasses? Because they don't C sharp.",
+            "I told my computer I needed a break, and it said: No problem, I'll go to sleep.",
+            "Why was the developer unhappy at their job? They wanted arrays.",
+            "How many programmers does it take to change a light bulb? None — it's a hardware problem.",
+            "Debugging: being the detective in a crime movie where you are also the murderer.",
+        ]
+        speak(random.choice(jokes))
     elif "play song" in command:
         query = command.replace("play song", "").replace("on youtube", "").strip()
         if query:
@@ -485,7 +492,15 @@ def handle_command(command):
         except Exception as e:
             logging.error(f"Prog joke error: {e}")
             speak("Why do programmers prefer dark mode? Because light attracts bugs.")
-    
+    elif "ask ai" in command or "think about" in command:
+        # Extract the actual question from the command
+        query = command.replace("ask ai", "").replace("think about", "").strip()
+        if query:
+            speak("Let me think...")
+            ai_answer = ask_ollama(query)
+            speak(ai_answer)
+        else:
+            speak("What should I ask the AI?")   
     else:
         speak("I heard you say: " + command)
     return "OK"
