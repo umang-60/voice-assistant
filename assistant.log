@@ -1,0 +1,53 @@
+2026-11-18 17:59:08,066 — \U0001f916 Assistant ready. Say siri to wake me.
+2026-11-18 17:59:08,158 — Imported existing <module 'comtypes.gen' from 'D:\\voice-assistant\\venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-18 17:59:08,158 — Using writeable comtypes cache directory: 'D:\voice-assistant\venv\Lib\site-packages\comtypes\gen'
+2026-11-18 17:59:08,334 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 17:59:13,833 — \U0001f3a4 Listening...
+2026-11-18 17:59:17,269 — \u2753 could not understand
+2026-11-18 17:59:17,287 — \U0001f50d wake check, text=''
+2026-11-18 17:59:17,628 — \U0001f3a4 Listening...
+2026-11-18 17:59:20,037 — \u2753 could not understand
+2026-11-18 17:59:20,059 — \U0001f50d wake check, text=''
+2026-11-18 17:59:20,416 — \U0001f3a4 Listening...
+2026-11-18 17:59:22,171 — \u2753 could not understand
+2026-11-18 17:59:22,193 — \U0001f50d wake check, text=''
+2026-11-18 17:59:22,537 — \U0001f3a4 Listening...
+2026-11-18 17:59:24,424 — \U0001f464 hey siri
+2026-11-18 17:59:24,450 — \U0001f916 Yes? I'm listening.
+2026-11-18 17:59:24,526 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 17:59:28,790 — \U0001f3a4 Listening...
+2026-11-18 17:59:30,584 — \U0001f464 bye-bye
+2026-11-18 17:59:30,609 — \U0001f916 I heard you say: bye-bye
+2026-11-18 17:59:30,689 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 17:59:34,592 — \U0001f3a4 Listening...
+2026-11-18 17:59:38,161 — \u2753 could not understand
+2026-11-18 17:59:38,524 — \U0001f3a4 Listening...
+2026-11-18 17:59:45,430 — \u2753 could not understand
+2026-11-18 17:59:45,810 — \U0001f3a4 Listening...
+2026-11-18 17:59:48,515 — \U0001f464 shut
+2026-11-18 17:59:48,539 — \U0001f916 I heard you say: shut
+2026-11-18 17:59:48,589 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 17:59:52,324 — \U0001f3a4 Listening...
+2026-11-18 17:59:54,137 — \U0001f464 shutdown
+2026-11-18 17:59:54,156 — \U0001f916 Say shutdown again to confirm, or say cancel to abort.
+2026-11-18 17:59:54,199 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 18:00:01,507 — \U0001f3a4 Listening...
+2026-11-18 18:00:03,214 — \U0001f464 shutdown
+2026-11-18 18:00:03,235 — DEBUG confirm = 'shutdown'
+2026-11-18 18:00:03,235 — \U0001f916 Shutting down in 10 seconds. Say cancel to abort.
+2026-11-18 18:00:03,298 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 18:00:10,761 — \U0001f3a4 Listening...
+2026-11-18 18:00:14,716 — \U0001f464 cancel
+2026-11-18 18:00:14,826 — \U0001f916 Shutdown cancelled.
+2026-11-18 18:00:14,870 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 18:00:18,408 — \U0001f3a4 Listening...
+2026-11-18 18:00:20,260 — \u2753 could not understand
+2026-11-18 18:00:20,576 — \U0001f3a4 Listening...
+2026-11-18 18:00:24,651 — \u2753 could not understand
+2026-11-18 18:00:24,675 — \U0001f916 Going back to sleep. Say siri to wake me.
+2026-11-18 18:00:24,734 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0
+2026-11-18 18:00:30,332 — \U0001f3a4 Listening...
+2026-11-18 18:00:32,228 — \U0001f464 stop stop
+2026-11-18 18:00:32,251 — \U0001f50d wake check, text='stop stop'
+2026-11-18 18:00:32,251 — \U0001f916 Goodbye!
+2026-11-18 18:00:32,321 — \U0001f5e3\ufe0f Using voice: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-GB_HAZEL_11.0

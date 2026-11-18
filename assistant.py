@@ -69,23 +69,26 @@ def is_yes(text):
     words = text.replace(",", " ").replace(".", " ").split()
     return any(w in words for w in YES_WORDS)
 
+import win32com.client
+
+_sapi = win32com.client.Dispatch("SAPI.SpVoice")
+_sapi.Volume = 100          # 0–100，直接拉满
+_sapi.Rate = 0              # -10 到 10，0 是正常速度；如果还嫌轻，可以设 -1 或 -2
+
+_voices = _sapi.GetVoices()
+for i in range(_voices.Count):
+    logging.info(f"🎙️ Voice {i}: {_voices.Item(i).GetDescription()}")
+for i in range(_voices.Count):
+    desc = _voices.Item(i).GetDescription().lower()
+    if "zira" in desc or "female" in desc:
+        _sapi.Voice = _voices.Item(i)
+        logging.info(f"🗣️ Using SAPI voice: {_voices.Item(i).GetDescription()}")
+        break
+
 def speak(text):
     logging.info(f"🤖 {text}")
     try:
-        temp_engine = pyttsx3.init('sapi5')
-        temp_engine.setProperty("rate", 175)
-        
-        # Select female voice
-        voices = temp_engine.getProperty('voices')
-        for voice in voices:
-            # Look for keywords in the name to determine female voice (Zira is Windows' built-in female voice)
-            if any(k in voice.name.lower() for k in ['zira', 'female', 'woman', 'girl']):
-                temp_engine.setProperty('voice', voice.id)
-                break
-        
-        temp_engine.say(text)
-        temp_engine.runAndWait()
-        del temp_engine
+        _sapi.Speak(text)
     except Exception as e:
         logging.error(f"TTS error: {e}")
     time.sleep(1.0)
