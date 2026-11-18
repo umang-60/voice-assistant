@@ -62,6 +62,20 @@ WEBSITES = {
     "spotify":   "https://open.spotify.com",
     "linkedin":  "https://www.linkedin.com",
 }
+APPS = {
+    "calculator":   "calc",
+    "paint":        "mspaint",
+    "word":         "winword",
+    "excel":        "excel",
+    "powerpoint":   "powerpnt",
+    "task manager": "taskmgr",
+    "control panel": "control",
+    "settings":     "ms-settings:",
+    "cmd":          "cmd",
+    "terminal":     "wt",
+    "vscode":       "code",
+    "spotify":      "spotify",
+}
 YES_WORDS = {"yes", "yeah", "yep", "yas", "yess", "yaas",
              "sure", "confirm", "ok", "okay", "haan", "ha"}
 
@@ -72,8 +86,8 @@ def is_yes(text):
 import win32com.client
 
 _sapi = win32com.client.Dispatch("SAPI.SpVoice")
-_sapi.Volume = 100          # 0–100，直接拉满
-_sapi.Rate = 0              # -10 到 10，0 是正常速度；如果还嫌轻，可以设 -1 或 -2
+_sapi.Volume = 100         
+_sapi.Rate = 0              
 
 _voices = _sapi.GetVoices()
 for i in range(_voices.Count):
@@ -503,7 +517,132 @@ def handle_command(command):
             ai_answer = ask_ollama(query)
             speak(ai_answer)
         else:
-            speak("What should I ask the AI?")   
+            speak("What should I ask the AI?")
+    elif any(word in command for word in ["open", "launch", "start"]) and any(app in command for app in APPS):
+        matched = next((a for a in APPS if a in command), None)
+        if matched:
+            speak(f"Opening {matched}")
+            os.system(f"start {APPS[matched]}")
+    elif "youtube search" in command:
+        query = command.replace("youtube search", "").strip()
+        if query:
+            speak(f"Searching YouTube for {query}")
+            webbrowser.open("https://www.youtube.com/results?search_query=" + query.replace(" ", "+"))
+        else:
+            speak("What should I search on YouTube?")
+    elif "translate" in command:
+        speak("What should I translate?")
+        text = listen(timeout=6)
+        if text:
+            speak("To which language? Say hindi, spanish, french, etc.")
+            lang = listen(timeout=5)
+            lang_map = {"hindi": "hi", "spanish": "es", "french": "fr",
+                        "german": "de", "japanese": "ja", "chinese": "zh"}
+            code = lang_map.get(lang, "en")
+            try:
+                r = requests.get(
+                    "https://api.mymemory.translated.net/get",
+                    params={"q": text, "langpair": f"en|{code}"},
+                    timeout=5
+                )
+                translated = r.json()["responseData"]["translatedText"]
+                speak(translated)
+            except Exception as e:
+                logging.error(f"Translate error: {e}")
+                speak("Translation failed.")
+    elif "currency" in command or "convert" in command:
+        speak("Say something like: convert 100 usd to inr")
+        text = listen(timeout=6)
+        import re
+        m = re.search(r'(\d+)\s*([a-z]{3})\s*to\s*([a-z]{3})', text)
+        if m:
+            amount, frm, to = m.group(1), m.group(2).upper(), m.group(3).upper()
+            try:
+                r = requests.get(f"https://api.exchangerate-api.com/v4/latest/{frm}", timeout=5)
+                rate = r.json()["rates"].get(to)
+                if rate:
+                    speak(f"{amount} {frm} is {float(amount) * rate:.2f} {to}.")
+                else:
+                    speak("Currency not found.")
+            except Exception as e:
+                logging.error(f"Currency error: {e}")
+                speak("Conversion failed.")
+        else:
+            speak("I didn't catch the amount and currencies.")
+    elif "spell" in command:
+        word = command.replace("spell", "").strip()
+        if word:
+            speak(" ".join(word))
+        else:
+            speak("What should I spell?")
+    elif "flip a coin" in command or "toss a coin" in command:
+        import random
+        speak(random.choice(["Heads", "Tails"]))
+
+    elif "roll a dice" in command or "roll a die" in command:
+        import random
+        speak(f"You rolled a {random.randint(1, 6)}.")
+    elif "random number" in command:
+        import re, random
+        m = re.search(r'between\s*(\d+)\s*and\s*(\d+)', command)
+        if m:
+            a, b = int(m.group(1)), int(m.group(2))
+            speak(f"Your random number is {random.randint(a, b)}.")
+        else:
+            speak(f"Your random number is {random.randint(1, 100)}.")
+    elif "day" in command and "what" in command:
+        speak("Today is " + datetime.datetime.now().strftime("%A") + ".")
+
+    elif "week number" in command:
+        speak(f"We are in week {datetime.datetime.now().isocalendar()[1]} of the year.")
+    elif "sleep timer" in command or "shutdown timer" in command:
+        import re
+        m = re.search(r'(\d+)\s*(minute|min)', command)
+        if m:
+            mins = int(m.group(1))
+            speak(f"PC will shut down in {mins} minutes.")
+            os.system(f"shutdown /s /t {mins * 60}")
+        else:
+            speak("Say something like: sleep timer 30 minutes.")
+    elif "cancel shutdown timer" in command or "cancel timer" in command:
+        os.system("shutdown /a")
+        speak("Timer cancelled.")
+    elif "internet speed" in command or "speed test" in command:
+        speak("Testing your internet speed, please wait.")
+        try:
+            import speedtest
+            st = speedtest.Speedtest()
+            st.get_best_server()
+            down = st.download() / 1_000_000
+            up = st.upload() / 1_000_000
+            speak(f"Download {down:.1f} Mbps, upload {up:.1f} Mbps.")
+        except Exception as e:
+            logging.error(f"Speedtest error: {e}")
+            speak("Speed test failed.")
+    elif "ip address" in command or "my ip" in command:
+        try:
+            r = requests.get("https://api.ipify.org?format=json", timeout=5)
+            speak("Your public IP is " + r.json()["ip"])
+        except Exception as e:
+            logging.error(f"IP error: {e}")
+            speak("Couldn't fetch IP.")
+    elif "clean temp" in command or "clear temp" in command:
+        speak("Cleaning temp folder.")
+        os.system('del /q /f /s %TEMP%\\* >nul 2>&1')
+        speak("Temp folder cleaned.")
+    elif "remind me" in command:
+        import re
+        m = re.search(r'remind me to (.+?) (?:in|after) (\d+)\s*(second|minute|hour)', command)
+        if m:
+            task = m.group(1)
+            amount = int(m.group(2))
+            unit = m.group(3)
+            seconds = amount * {"second": 1, "minute": 60, "hour": 3600}[unit]
+            speak(f"Okay, I'll remind you to {task} in {amount} {unit}s.")
+            time.sleep(seconds)
+            speak(f"Reminder: {task}")
+        else:
+            speak("Say something like: remind me to drink water in 10 minutes.")
     else:
         speak("I heard you say: " + command)
     return "OK"
