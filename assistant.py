@@ -7,6 +7,13 @@ import time
 import logging
 import keyboard as kb
 import requests
+import random 
+import vosk
+import json
+
+
+CURRENT_LANG = "en-IN"   # "en-IN" for English, "hi-IN" for Hindi
+HINDI_MODE = False        # ← new flag
 def ask_ollama(prompt):
     """Sends a prompt to the local Ollama server and returns the answer."""
     logging.info(f"🧠 Asking Ollama: {prompt}")
@@ -34,7 +41,57 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s — %(message)s"
 )
+try:
+    vosk_model_hi = vosk.Model("D:/voice-assistant/models/vosk-model-small-hi-0.22")
+    logging.info("✅ Vosk Hindi model loaded")
+except Exception as e:
+    logging.error(f"❌ Vosk model failed to load: {e}")
+    vosk_model_hi = None
+# --- Chat personality ---
+CHAT_SYSTEM_PROMPT = (
+    "You are Siri, a friendly, warm, and playful female personal assistant. "
+    "You talk like a real girl — casual, natural, use contractions (I'm, you're, let's). "
+    "Keep replies short (1-3 sentences) because they will be spoken aloud. "
+    "Be encouraging, use light humor, and ask follow-up questions sometimes. "
+    "Never say you are an AI or a language model. Just be Siri."
+)
 
+chat_history = []   # list of {"role": "user"/"assistant", "content": "..."}
+
+def chat_with_siri(user_message):
+    global chat_history, CURRENT_LANG, HINDI_MODE
+    chat_history.append({"role": "user", "content": user_message})
+    chat_history = chat_history[-6:]
+
+    if HINDI_MODE:
+        lang_instruction = "Reply in Hindi..."
+    else:
+        lang_instruction = "Reply in English. Keep replies short (1-3 sentences). "
+
+    prompt = CHAT_SYSTEM_PROMPT + "\n\n" + lang_instruction + "\n"
+    for msg in chat_history:
+        if msg["role"] == "user":
+            prompt += f"User: {msg['content']}\n"
+        else:
+            prompt += f"Siri: {msg['content']}\n"
+    prompt += "Siri:"
+
+    logging.info(f"💬 Chat prompt sent ({len(chat_history)} msgs, lang={CURRENT_LANG})")
+    try:
+        resp = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": "llama3.2", "prompt": prompt, "stream": False},
+            timeout=60
+        )
+        resp.raise_for_status()
+        reply = resp.json().get("response", "").strip()
+        chat_history.append({"role": "assistant", "content": reply})
+        return reply if reply else "Hmm, I lost my train of thought."
+    except Exception as e:
+        logging.error(f"Chat error: {e}")
+        return "Sorry, my brain glitched for a second. Say that again?"
+    
+    
 # --- Setup ---
 r = sr.Recognizer()
 with sr.Microphone() as source:
@@ -43,7 +100,7 @@ r.energy_threshold = 100
 r.dynamic_energy_threshold = True
 r.pause_threshold = 0.5
 
-WAKE_WORD = "siri"
+WAKE_WORDS = ["siri", "सिरी", "सिरि", "शिरी", "seeree", "siri"]
 CONVERSATION_TIMEOUT = 30
 WEBSITES = {
     "youtube":   "https://www.youtube.com",
@@ -108,19 +165,38 @@ def speak(text):
     time.sleep(1.0)
 
 def listen(timeout=5, phrase_time_limit=5):
+    global CURRENT_LANG
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source, duration=0.2)
-        logging.info("🎤 Listening...")
+        logging.info(f"🎤 Listening... (lang={CURRENT_LANG})")
         try:
             audio = r.listen(source, timeout=timeout, phrase_time_limit=phrase_time_limit)
-            data = r.recognize_google(audio, show_all=True)
-            if data and data.get('alternative'):
-                text = data['alternative'][0]['transcript'].strip().lower()
+
+            if CURRENT_LANG == "hi-IN" and vosk_model_hi is not None:
+                raw_data = audio.get_raw_data(convert_rate=16000, convert_width=2)
+                rec = vosk.KaldiRecognizer(vosk_model_hi, 16000)
+                # Feed audio in chunks (Vosk expects small chunks)
+                chunk_size = 4000
+                for i in range(0, len(raw_data), chunk_size):
+                    rec.AcceptWaveform(raw_data[i:i+chunk_size])
+                result = json.loads(rec.FinalResult())
+                text = result.get("text", "").strip().lower()
                 if text:
                     logging.info(f"👤 {text}")
                     return text
-            logging.info("👤 (empty result)")
-            return ""
+                logging.info("👤 (Vosk empty result)")
+                return ""
+            else:
+                # English → Google
+                data = r.recognize_google(audio, language=CURRENT_LANG, show_all=True)
+                if data and data.get('alternative'):
+                    text = data['alternative'][0]['transcript'].strip().lower()
+                    if text:
+                        logging.info(f"👤 {text}")
+                        return text
+                logging.info("👤 (empty result)")
+                return ""
+                
         except sr.WaitTimeoutError:
             logging.info("⏱️ no speech detected")
             return ""
@@ -151,17 +227,27 @@ def confirm_shutdown():
     return False
 
 def wait_for_wake_word():
+    global CURRENT_LANG, HINDI_MODE
     while True:
         text = listen(timeout=5)
-        if WAKE_WORD in text:
-            speak("Yes? I'm listening.")
+        if any(w in text for w in WAKE_WORDS):
+            if HINDI_MODE:
+                speak("हाँ, मैं सुन रही हूँ।")
+            else:
+                speak("Yes? I'm listening.")
             return True
         logging.info(f"🔍 wake check, text={repr(text)}")
-        if any(w in text for w in ["stop", "exit", "quit", "goodbye"]):
-            speak("Goodbye!")
-            return "STOP"
+        # stop/exit in both languages
+        if any(w in text for w in ["stop", "exit", "quit", "goodbye",
+                                    "रुको", "बंद", "अलविदा", "बाय"]):
+            if CURRENT_LANG == "hi-IN":
+                speak("अलविदा!")
+            else:
+                speak("Goodbye!")
+            return "STOP"   
 
 def handle_command(command):
+    global CURRENT_LANG,HINDI_MODE
     if "hello" in command:
         speak("Hello! How can I help you?")
     elif "time" in command:
@@ -282,7 +368,7 @@ def handle_command(command):
         matched = next((s for s in WEBSITES if s in command), None)
         if matched:
             # Vary the spoken response
-            import random
+    
             openers = [
                 f"Opening {matched} for you.",
                 f"Here's {matched}.",
@@ -293,7 +379,7 @@ def handle_command(command):
             speak(random.choice(openers))
             webbrowser.open(WEBSITES[matched])
     elif "joke" in command:
-        import random
+        
         jokes = [
             "Why do programmers prefer dark mode? Because light attracts bugs.",
             "Why did the Python developer go broke? Because he used up all his cache.",
@@ -576,14 +662,14 @@ def handle_command(command):
         else:
             speak("What should I spell?")
     elif "flip a coin" in command or "toss a coin" in command:
-        import random
+        
         speak(random.choice(["Heads", "Tails"]))
 
     elif "roll a dice" in command or "roll a die" in command:
-        import random
+        
         speak(f"You rolled a {random.randint(1, 6)}.")
     elif "random number" in command:
-        import re, random
+        import re
         m = re.search(r'between\s*(\d+)\s*and\s*(\d+)', command)
         if m:
             a, b = int(m.group(1)), int(m.group(2))
@@ -643,9 +729,63 @@ def handle_command(command):
             speak(f"Reminder: {task}")
         else:
             speak("Say something like: remind me to drink water in 10 minutes.")
+    elif ("let's talk" in command or "chat with me" in command or "talk to me" in command
+          or "बात करो" in command or "बात करें" in command or "चैट करो" in command):
+        if HINDI_MODE:
+                speak(random.choice([
+                "ज़रूर! क्या बात करें?",
+                "मुझे बात करना अच्छा लगेगा! आपका दिन कैसा रहा?",
+                "हाँ, मैं सुन रही हूँ। क्या बात करनी है?",
+            ]))
+        else:
+            speak(random.choice([
+            "Sure! What's on your mind?",
+            "I'd love to chat! How's your day going?",
+            "Hey, I'm all ears. What do you wanna talk about?",
+            ]))
+        # Enter chat loop
+        while True:
+            user_msg = listen(timeout=10, phrase_time_limit=8)
+            if not user_msg:
+                continue
+            if any(w in user_msg for w in ["stop chatting", "stop chat", "end chat", "that's all", "bye"]):
+                speak(random.choice([
+                    "Aww, okay! Talk to you later.",
+                    "Alright, I'll be here whenever you want to chat again.",
+                    "Bye for now — this was fun!",
+                ]))
+                break
+            reply = chat_with_siri(user_msg)
+            speak(reply)
+        return "OK"
+    elif "hindi" in command or "हिंदी" in command:
+        HINDI_MODE = True
+        CURRENT_LANG = "hi-IN"   # ← actual Hindi recognition
+        speak("ठीक है, अब मैं हिंदी में बात करूँगी।")
+        # switch TTS voice to Hindi
+        for i in range(_voices.Count):
+            desc = _voices.Item(i).GetDescription().lower()
+            if "hindi" in desc or "hemant" in desc or "kalpana" in desc:
+                _sapi.Voice = _voices.Item(i)
+                logging.info(f"🗣️ Switched to Hindi voice: {_voices.Item(i).GetDescription()}")
+                break
+        return "OK"
+
+    elif "english" in command or "अंग्रेज़ी" in command:
+        HINDI_MODE = False
+        CURRENT_LANG = "en-IN"
+        speak("Okay, switching back to English.")
+        for i in range(_voices.Count):
+            desc = _voices.Item(i).GetDescription().lower()
+            if "zira" in desc or "female" in desc:
+                _sapi.Voice = _voices.Item(i)
+                logging.info(f"🗣️ Switched to English voice: {_voices.Item(i).GetDescription()}")
+                break
+        return "OK"
     else:
-        speak("I heard you say: " + command)
-    return "OK"
+        # Casual remark → let Siri reply naturally
+        reply = chat_with_siri(command)
+        speak(reply)
 
 # --- Main loop ---
 speak("Assistant ready. Say siri to wake me.")
