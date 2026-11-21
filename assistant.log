@@ -1,180 +1,211 @@
-2026-11-19 18:44:37,911 — \U0001f916 Goodbye!
-2026-11-20 10:12:46,702 — \u2705 Vosk Hindi model loaded
-2026-11-20 10:12:48,417 — \U0001f399\ufe0f Voice 0: Microsoft David Desktop - English (United States)
-2026-11-20 10:12:48,418 — \U0001f399\ufe0f Voice 1: Microsoft Hazel Desktop - English (Great Britain)
-2026-11-20 10:12:48,418 — \U0001f399\ufe0f Voice 2: Microsoft Zira Desktop - English (United States)
-2026-11-20 10:12:48,420 — \U0001f5e3\ufe0f Using SAPI voice: Microsoft Zira Desktop - English (United States)
-2026-11-20 10:12:48,420 — \U0001f916 Assistant ready. Say siri to wake me.
-2026-11-20 10:12:53,955 — \U0001f3a4 Listening... (lang=en-IN)
-2026-11-20 10:12:57,061 — \u2753 could not understand
-2026-11-20 10:12:57,076 — \U0001f50d wake check, text=''
-2026-11-20 10:12:57,351 — \U0001f3a4 Listening... (lang=en-IN)
-2026-11-20 10:12:58,820 — \U0001f464 hey siri
-2026-11-20 10:12:58,840 — \U0001f916 Yes? I'm listening.
-2026-11-20 10:13:03,221 — \U0001f3a4 Listening... (lang=en-IN)
-2026-11-20 10:13:07,228 — \U0001f464 hindi
-2026-11-20 10:13:07,251 — \U0001f916 \u0920\u0940\u0915 \u0939\u0948, \u0905\u092c \u092e\u0948\u0902 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u092c\u093e\u0924 \u0915\u0930\u0942\u0901\u0917\u0940\u0964
-2026-11-20 10:13:08,696 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:11,833 — \U0001f464 (Vosk empty result)
-2026-11-20 10:13:12,145 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:13,745 — \U0001f464 (Vosk empty result)
-2026-11-20 10:13:14,075 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:15,347 — \U0001f464 (Vosk empty result)
-2026-11-20 10:13:15,654 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:21,251 — \U0001f464 \u0926\u0940
-2026-11-20 10:13:21,277 — \U0001f4ac Chat prompt sent (1 msgs, lang=hi-IN)
-2026-11-20 10:13:34,732 — \U0001f916 \u0905\u0930\u0947, \u0924\u0941\u092e \u0915\u0948\u0938\u0947 \u0939\u094b? \u0915\u094d\u092f\u093e \u092e\u0948\u0902 \u0906\u092a\u0915\u0940 \u092e\u0926\u0926 \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u0942\u0901?
-2026-11-20 10:13:36,712 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:41,440 — \U0001f464 \u0928\u092e\u0938\u094d\u0924\u0947
-2026-11-20 10:13:41,468 — \U0001f4ac Chat prompt sent (3 msgs, lang=hi-IN)
-2026-11-20 10:13:46,493 — \U0001f916 \u0928\u092e\u0938\u094d\u0924\u0947! \u0906\u092a\u0915\u093e \u0938\u094d\u0935\u093e\u0917\u0924 \u0939\u0948! \u0915\u094d\u092f\u093e \u0915\u0941\u091b \u0939\u0948 \u091c\u093f\u0938\u092e\u0947\u0902 \u092e\u0948\u0902 \u0906\u092a\u0915\u0940 \u092e\u0926\u0926 \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u0942\u0901?
-2026-11-20 10:13:47,904 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:51,568 — \U0001f464 (Vosk empty result)
-2026-11-20 10:13:51,884 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:56,873 — \u23f1\ufe0f no speech detected
-2026-11-20 10:13:57,241 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:13:59,823 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:00,168 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:05,067 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:05,383 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:07,686 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:07,995 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:09,816 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:10,161 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:12,136 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:12,157 — \U0001f916 Going back to sleep. Say siri to wake me.
-2026-11-20 10:14:17,796 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:20,389 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:20,406 — \U0001f50d wake check, text=''
-2026-11-20 10:14:20,692 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:23,609 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:23,625 — \U0001f50d wake check, text=''
-2026-11-20 10:14:23,914 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:27,841 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:27,860 — \U0001f50d wake check, text=''
-2026-11-20 10:14:28,151 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:30,963 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:30,981 — \U0001f50d wake check, text=''
-2026-11-20 10:14:31,283 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:33,758 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:33,776 — \U0001f50d wake check, text=''
-2026-11-20 10:14:34,070 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:39,059 — \u23f1\ufe0f no speech detected
-2026-11-20 10:14:39,093 — \U0001f50d wake check, text=''
-2026-11-20 10:14:39,491 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:41,003 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:41,020 — \U0001f50d wake check, text=''
-2026-11-20 10:14:41,321 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:43,841 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:43,857 — \U0001f50d wake check, text=''
-2026-11-20 10:14:44,141 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:50,027 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:50,044 — \U0001f50d wake check, text=''
-2026-11-20 10:14:50,332 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:14:57,666 — \U0001f464 (Vosk empty result)
-2026-11-20 10:14:57,683 — \U0001f50d wake check, text=''
-2026-11-20 10:14:57,983 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:01,631 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:01,648 — \U0001f50d wake check, text=''
-2026-11-20 10:15:01,963 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:04,142 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:04,161 — \U0001f50d wake check, text=''
-2026-11-20 10:15:04,468 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:07,204 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:07,223 — \U0001f50d wake check, text=''
-2026-11-20 10:15:07,533 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:10,982 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:11,003 — \U0001f50d wake check, text=''
-2026-11-20 10:15:11,330 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:14,145 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:14,164 — \U0001f50d wake check, text=''
-2026-11-20 10:15:14,460 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:20,461 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:20,479 — \U0001f50d wake check, text=''
-2026-11-20 10:15:20,782 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:24,544 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:24,563 — \U0001f50d wake check, text=''
-2026-11-20 10:15:24,934 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:27,556 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:27,573 — \U0001f50d wake check, text=''
-2026-11-20 10:15:27,882 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:30,469 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:30,487 — \U0001f50d wake check, text=''
-2026-11-20 10:15:30,783 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:32,499 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:32,517 — \U0001f50d wake check, text=''
-2026-11-20 10:15:32,831 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:35,067 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:35,084 — \U0001f50d wake check, text=''
-2026-11-20 10:15:35,380 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:39,890 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:39,909 — \U0001f50d wake check, text=''
-2026-11-20 10:15:40,199 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:42,416 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:42,436 — \U0001f50d wake check, text=''
-2026-11-20 10:15:42,804 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:45,302 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:45,321 — \U0001f50d wake check, text=''
-2026-11-20 10:15:45,603 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:48,194 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:48,222 — \U0001f50d wake check, text=''
-2026-11-20 10:15:48,600 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:15:54,047 — \U0001f464 (Vosk empty result)
-2026-11-20 10:15:54,064 — \U0001f50d wake check, text=''
-2026-11-20 10:15:54,371 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:00,359 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:00,379 — \U0001f50d wake check, text=''
-2026-11-20 10:16:00,706 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:03,807 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:03,826 — \U0001f50d wake check, text=''
-2026-11-20 10:16:04,133 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:08,529 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:08,547 — \U0001f50d wake check, text=''
-2026-11-20 10:16:08,908 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:11,327 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:11,344 — \U0001f50d wake check, text=''
-2026-11-20 10:16:11,656 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:18,611 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:18,631 — \U0001f50d wake check, text=''
-2026-11-20 10:16:18,968 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:21,273 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:21,298 — \U0001f50d wake check, text=''
-2026-11-20 10:16:21,649 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:23,293 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:23,315 — \U0001f50d wake check, text=''
-2026-11-20 10:16:23,680 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:25,395 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:25,415 — \U0001f50d wake check, text=''
-2026-11-20 10:16:25,734 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:28,611 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:28,628 — \U0001f50d wake check, text=''
-2026-11-20 10:16:28,929 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:31,281 — \U0001f464 (Vosk empty result)
-2026-11-20 10:16:31,306 — \U0001f50d wake check, text=''
-2026-11-20 10:16:31,654 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:16:35,492 — \U0001f916 Goodbye!
-2026-11-20 10:16:49,831 — \u2705 Vosk Hindi model loaded
-2026-11-20 10:16:51,031 — \U0001f399\ufe0f Voice 0: Microsoft David Desktop - English (United States)
-2026-11-20 10:16:51,031 — \U0001f399\ufe0f Voice 1: Microsoft Hazel Desktop - English (Great Britain)
-2026-11-20 10:16:51,031 — \U0001f399\ufe0f Voice 2: Microsoft Zira Desktop - English (United States)
-2026-11-20 10:16:51,032 — \U0001f5e3\ufe0f Using SAPI voice: Microsoft Zira Desktop - English (United States)
-2026-11-20 10:16:51,032 — \U0001f916 Assistant ready. Say siri to wake me.
-2026-11-20 10:16:56,388 — \U0001f3a4 Listening... (lang=en-IN)
-2026-11-20 10:17:01,380 — \u23f1\ufe0f no speech detected
-2026-11-20 10:17:01,414 — \U0001f50d wake check, text=''
-2026-11-20 10:17:01,760 — \U0001f3a4 Listening... (lang=en-IN)
-2026-11-20 10:17:03,627 — \U0001f464 hey siri
-2026-11-20 10:17:03,649 — \U0001f916 Yes? I'm listening.
-2026-11-20 10:17:08,029 — \U0001f3a4 Listening... (lang=en-IN)
-2026-11-20 10:17:12,369 — \u2753 could not understand
-2026-11-20 10:17:12,715 — \U0001f3a4 Listening... (lang=en-IN)
-2026-11-20 10:17:18,110 — \U0001f464 hindi
-2026-11-20 10:17:18,124 — \U0001f916 \u0920\u0940\u0915 \u0939\u0948, \u0905\u092c \u092e\u0948\u0902 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u092c\u093e\u0924 \u0915\u0930\u0942\u0901\u0917\u0940\u0964
-2026-11-20 10:17:19,529 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:17:21,951 — \U0001f464 (Vosk empty result)
-2026-11-20 10:17:22,280 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:17:25,132 — \U0001f464 (Vosk empty result)
-2026-11-20 10:17:25,561 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:17:28,838 — \U0001f464 (Vosk empty result)
-2026-11-20 10:17:29,169 — \U0001f3a4 Listening... (lang=hi-IN)
-2026-11-20 10:17:32,755 — \U0001f916 Goodbye!
+2026-11-21 10:36:58,485 — \u2705 Vosk Hindi model loaded
+2026-11-21 10:36:59,712 — \U0001f399\ufe0f Voice 0: Microsoft David Desktop - English (United States)
+2026-11-21 10:36:59,712 — \U0001f399\ufe0f Voice 1: Microsoft Hazel Desktop - English (Great Britain)
+2026-11-21 10:36:59,712 — \U0001f399\ufe0f Voice 2: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:36:59,713 — \U0001f5e3\ufe0f Using SAPI voice: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:37:00,073 — \U0001f916 Assistant ready. Say siri to wake me.
+2026-11-21 10:37:04,531 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:37:07,216 — \U0001f464 hey siri
+2026-11-21 10:37:07,232 — \U0001f916 Yes? I'm listening.
+2026-11-21 10:37:10,582 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:37:16,227 — \U0001f464 let's talk in hindi
+2026-11-21 10:37:16,248 — \U0001f916 Sure! What's on your mind?
+2026-11-21 10:37:19,902 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:37:23,651 — \u2753 could not understand
+2026-11-21 10:37:24,029 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:37:29,452 — \u2753 could not understand
+2026-11-21 10:37:29,812 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:37:31,414 — \U0001f464 hindi
+2026-11-21 10:37:31,429 — \U0001f4ac Chat prompt sent (1 msgs, lang=en-IN)
+2026-11-21 10:37:42,961 — \U0001f916 I'm not fluent in Hindi, but I can try to help you out. Can you please tell me what you need assistance with, like a translation or something else?
+2026-11-21 10:37:53,851 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:38:01,456 — \u2753 could not understand
+2026-11-21 10:38:01,832 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:38:04,560 — \u2753 could not understand
+2026-11-21 10:38:04,923 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:38:06,376 — \U0001f916 Goodbye!
+2026-11-21 10:43:34,618 — \u2705 Vosk Hindi model loaded
+2026-11-21 10:43:35,837 — \U0001f399\ufe0f Voice 0: Microsoft David Desktop - English (United States)
+2026-11-21 10:43:35,837 — \U0001f399\ufe0f Voice 1: Microsoft Hazel Desktop - English (Great Britain)
+2026-11-21 10:43:35,837 — \U0001f399\ufe0f Voice 2: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:43:35,839 — \U0001f5e3\ufe0f Using SAPI voice: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:43:36,236 — \U0001f916 Assistant ready. Say siri to wake me.
+2026-11-21 10:43:41,096 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:43:45,246 — \U0001f464 hey siri
+2026-11-21 10:43:45,263 — \U0001f916 Yes? I'm listening.
+2026-11-21 10:43:49,149 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:43:51,001 — \U0001f464 hindi
+2026-11-21 10:43:51,022 — \U0001f916 \u0920\u0940\u0915 \u0939\u0948, \u0905\u092c \u092e\u0948\u0902 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u092c\u093e\u0924 \u0915\u0930\u0942\u0901\u0917\u0940\u0964
+2026-11-21 10:43:53,697 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:43:57,212 — \U0001f916 Goodbye!
+2026-11-21 10:50:15,805 — \u2705 Vosk Hindi model loaded
+2026-11-21 10:50:17,013 — \U0001f399\ufe0f Voice 0: Microsoft David Desktop - English (United States)
+2026-11-21 10:50:17,013 — \U0001f399\ufe0f Voice 1: Microsoft Hazel Desktop - English (Great Britain)
+2026-11-21 10:50:17,014 — \U0001f399\ufe0f Voice 2: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:50:17,015 — \U0001f5e3\ufe0f Using SAPI voice: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:50:17,375 — \U0001f916 Assistant ready. Say siri to wake me.
+2026-11-21 10:50:22,231 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:50:28,086 — \U0001f464 hey siri
+2026-11-21 10:50:28,108 — \U0001f916 Yes? I'm listening.
+2026-11-21 10:50:31,964 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:50:38,355 — \U0001f464 hindi
+2026-11-21 10:50:38,375 — \U0001f916 \u0920\u0940\u0915 \u0939\u0948, \u0905\u092c \u092e\u0948\u0902 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u092c\u093e\u0924 \u0915\u0930\u0942\u0901\u0917\u0940\u0964
+2026-11-21 10:50:40,991 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:50:46,859 — \U0001f464 (Vosk empty result)
+2026-11-21 10:50:47,191 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:50:49,226 — \U0001f916 Goodbye!
+2026-11-21 10:56:12,711 — \u2705 Vosk Hindi model loaded
+2026-11-21 10:56:13,937 — \U0001f399\ufe0f Voice 0: Microsoft David Desktop - English (United States)
+2026-11-21 10:56:13,937 — \U0001f399\ufe0f Voice 1: Microsoft Hazel Desktop - English (Great Britain)
+2026-11-21 10:56:13,937 — \U0001f399\ufe0f Voice 2: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:56:13,938 — \U0001f5e3\ufe0f Using SAPI voice: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:56:18,228 — \U0001f916 Assistant ready. Say siri to wake me.
+2026-11-21 10:56:23,039 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:56:26,851 — \u2753 could not understand
+2026-11-21 10:56:26,874 — \U0001f50d wake check, text=''
+2026-11-21 10:56:27,190 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:56:29,874 — \u2753 could not understand
+2026-11-21 10:56:29,895 — \U0001f50d wake check, text=''
+2026-11-21 10:56:30,310 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:56:31,255 — \U0001f916 Goodbye!
+2026-11-21 10:57:47,211 — \u2705 Vosk Hindi model loaded
+2026-11-21 10:57:48,496 — \U0001f399\ufe0f Voice 0: Microsoft David Desktop - English (United States)
+2026-11-21 10:57:48,496 — \U0001f399\ufe0f Voice 1: Microsoft Hazel Desktop - English (Great Britain)
+2026-11-21 10:57:48,497 — \U0001f399\ufe0f Voice 2: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:57:48,499 — \U0001f5e3\ufe0f Using SAPI voice: Microsoft Zira Desktop - English (United States)
+2026-11-21 10:57:48,738 — \U0001f916 Assistant ready. Say siri to wake me.
+2026-11-21 10:57:53,547 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:57:55,767 — \u2753 could not understand
+2026-11-21 10:57:55,785 — \U0001f50d wake check, text=''
+2026-11-21 10:57:56,127 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:57:59,159 — \u2753 could not understand
+2026-11-21 10:57:59,174 — \U0001f50d wake check, text=''
+2026-11-21 10:57:59,464 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:58:01,386 — \u2753 could not understand
+2026-11-21 10:58:01,402 — \U0001f50d wake check, text=''
+2026-11-21 10:58:01,711 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:58:04,578 — \u2753 could not understand
+2026-11-21 10:58:04,596 — \U0001f50d wake check, text=''
+2026-11-21 10:58:04,894 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:58:10,836 — \U0001f464 hey siri
+2026-11-21 10:58:10,882 — \U0001f916 Yes? I'm listening.
+2026-11-21 10:58:14,688 — \U0001f3a4 Listening... (lang=en-IN)
+2026-11-21 10:58:18,808 — \U0001f464 hindi
+2026-11-21 10:58:18,833 — \U0001f916 \u0920\u0940\u0915 \u0939\u0948, \u0905\u092c \u092e\u0948\u0902 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u092c\u093e\u0924 \u0915\u0930\u0942\u0901\u0917\u0940\u0964
+2026-11-21 10:58:24,877 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:58:27,901 — \U0001f464 (Vosk empty result)
+2026-11-21 10:58:28,228 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:58:31,994 — \U0001f464 \u0936\u0941\u0915\u094d\u0930\u093f\u092f\u093e
+2026-11-21 10:58:32,015 — \U0001f4ac Chat prompt sent (1 msgs, lang=hi-IN)
+2026-11-21 10:58:41,948 — \U0001f916 \u0906\u092a\u0915\u0940 \u0938\u0947\u0939\u0924 \u0915\u0948\u0938\u0947 \u0939\u0948?
+2026-11-21 10:58:47,725 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:58:50,329 — \U0001f464 \u092c\u0922\u093c\u093f\u092f\u093e \u0939\u0942\u0902
+2026-11-21 10:58:50,355 — \U0001f4ac Chat prompt sent (3 msgs, lang=hi-IN)
+2026-11-21 10:58:54,619 — \U0001f916 \u0906\u092a\u0915\u0947 \u0926\u093f\u0928 \u0915\u0948\u0938\u0947 \u0930\u0939\u0947, \u0915\u094d\u092f\u093e \u0915\u0941\u091b \u0928\u092f\u093e \u0916\u093e\u0938 \u0939\u0941\u0906?
+2026-11-21 10:59:01,684 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:59:04,997 — \U0001f464 \u0935\u0939\u0940\u0902 \u0915\u0941\u091b \u0916\u093e\u0938 \u0928\u0939\u0940\u0902 \u0939\u0941\u0906
+2026-11-21 10:59:05,032 — \U0001f4ac Chat prompt sent (5 msgs, lang=hi-IN)
+2026-11-21 10:59:12,245 — \U0001f916 \u0905\u0917\u0930 \u0915\u0941\u091b \u0916\u093e\u0938 \u0928\u0939\u0940\u0902 \u0939\u0941\u0906, \u0924\u094b \u0915\u094d\u092f\u093e \u0906\u092a \u092e\u0941\u091d\u0938\u0947 \u0915\u0941\u091b \u0938\u0941\u0928\u0928\u093e \u091a\u093e\u0939\u0924\u0947 \u0939\u0948\u0902? \u092e\u0948\u0902 \u0906\u092a\u0915\u094b \u0915\u0941\u091b \u092e\u091c\u0947\u0926\u093e\u0930 \u091a\u0941\u091f\u0915\u0941\u0932\u0947 \u0938\u0941\u0928\u093e \u0938\u0915\u0924\u0940 \u0939\u0942\u0901\u0964
+2026-11-21 10:59:25,579 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:59:28,935 — \U0001f464 \u0920\u0940\u0915 \u0938\u0941\u0928\u093e
+2026-11-21 10:59:28,968 — \U0001f4ac Chat prompt sent (6 msgs, lang=hi-IN)
+2026-11-21 10:59:35,244 — \U0001f916 \u0915\u094d\u092f\u093e \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u0947 \u0915\u093e\u092e \u092e\u0947\u0902 \u0915\u0941\u091b \u0939\u0932\u094d\u0915\u093e-\u092b\u0941\u0932\u094d\u0915\u093e \u0914\u0930 \u092e\u091c\u0947\u0926\u093e\u0930 \u0939\u0941\u0906?
+2026-11-21 10:59:42,617 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 10:59:46,692 — \U0001f464 \u092e\u0948\u0902\u0928\u0947 \u0905\u092d\u0940 \u0924\u0915 \u0915\u0941\u091b \u0915\u093e\u092e \u0928\u0939\u0940\u0902 \u0915\u093f\u092f\u093e
+2026-11-21 10:59:46,719 — \U0001f4ac Chat prompt sent (6 msgs, lang=hi-IN)
+2026-11-21 10:59:54,397 — \U0001f916 \u0939\u093e\u0901, \u0915\u0941\u091b \u0939\u0932\u094d\u0915\u093e-\u092b\u0941\u0932\u094d\u0915\u093e \u0939\u0941\u0906 \u0939\u0948! \u092e\u0948\u0902\u0928\u0947 \u0906\u092a\u0915\u0947 \u0921\u093f\u0938\u094d\u092a\u094d\u0932\u0947 \u092e\u0947\u0902 \u0915\u0941\u091b \u0928\u092f\u093e \u0936\u0948\u0932\u0940 \u092e\u0947\u0902 \u0926\u093f\u0916\u093e\u092f\u093e \u0939\u0948 - \u0926\u0947\u0916\u094b, \u0915\u094d\u092f\u093e \u0916\u0942\u092c\u0938\u0942\u0930\u0924 \u0939\u0948?
+2026-11-21 11:00:09,934 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:00:13,185 — \U0001f464 \u0915\u094d\u092f\u093e \u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u0926\u093f\u0916 \u0930\u0939\u093e
+2026-11-21 11:00:13,212 — \U0001f4ac Chat prompt sent (6 msgs, lang=hi-IN)
+2026-11-21 11:00:22,164 — \U0001f916 \u092e\u0948\u0902 \u092b\u093f\u0930 \u0938\u0947 \u0906\u092a\u0915\u094b \u0926\u093f\u0916\u093e \u0938\u0915\u0924\u0940 \u0939\u0942\u0901! \u0915\u094d\u092f\u093e \u0906\u092a \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u092e\u093f\u0932\u0915\u0930 \u090f\u0915 \u092e\u091c\u0947\u0926\u093e\u0930 \u091a\u0941\u091f\u0915\u0941\u0932\u093e \u0938\u093e\u091d\u093e \u0915\u0930\u0928\u093e \u091a\u093e\u0939\u0924\u0947 \u0939\u0948\u0902?
+2026-11-21 11:00:34,685 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:00:38,600 — \U0001f464 \u092e\u0947\u0930\u0947 \u092a\u093e\u0938 \u091a\u0941\u091f\u0915\u0932\u093e \u0928\u0939\u0940\u0902 \u0939\u0948 \u0936\u094d\u0930\u0940
+2026-11-21 11:00:38,623 — \U0001f4ac Chat prompt sent (6 msgs, lang=hi-IN)
+2026-11-21 11:00:50,117 — \U0001f916 \u0915\u094b\u0908 \u092c\u093e\u0924 \u0928\u0939\u0940\u0902! \u092e\u0948\u0902 \u0906\u092a\u0915\u094b \u090f\u0915 \u092e\u091c\u0947\u0926\u093e\u0930 \u091a\u0941\u091f\u0915\u0941\u0932\u093e \u0938\u0941\u0928\u093e \u0938\u0915\u0924\u0940 \u0939\u0942\u0901\u0964 \u0924\u094b... \u0915\u094d\u092f\u093e \u0924\u0941\u092e\u094d\u0939\u0947\u0902 \u0932\u0917\u0924\u093e \u0939\u0948 \u0915\u093f \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u0947 \u0926\u094b\u0938\u094d\u0924 \u0915\u094b \u0915\u094b\u0908 \u092e\u094c\u0915\u093e \u092e\u093f\u0932\u093e \u0924\u094b \u0935\u0939 \u0905\u092a\u0928\u093e \u0926\u093f\u0928 \u092c\u0928\u093e \u0926\u0947\u0924\u0947 \u0939\u0948\u0902?
+2026-11-21 11:01:08,012 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:01:12,987 — \U0001f464 \u092e\u0947\u0930\u0947 \u0926\u094b\u0938\u094d\u0924 \u0928\u0947 \u0905\u092d\u0940 \u0924\u0915 \u0905\u092a\u0928\u093e
+2026-11-21 11:01:13,019 — \U0001f4ac Chat prompt sent (6 msgs, lang=hi-IN)
+2026-11-21 11:01:24,813 — \U0001f916 \u0939\u093e\u0939\u093e, \u092f\u0939 \u0924\u094b \u092c\u0939\u0941\u0924 \u0939\u0940 \u092e\u091c\u0947\u0926\u093e\u0930 \u0939\u0948! \u0932\u0917\u0924\u093e \u0939\u0948 \u0906\u092a\u0915\u0947 \u0926\u094b\u0938\u094d\u0924 \u0915\u094b \u0905\u092d\u0940 \u090f\u0915 \u0905\u091a\u094d\u091b\u0940 \u0926\u093f\u0928\u091a\u0930\u094d\u092f\u093e \u092e\u093f\u0932 \u0917\u0908, \u0936\u093e\u092f\u0926! \u0915\u094d\u092f\u093e \u0906\u092a\u0915\u094b \u0932\u0917\u0924\u093e \u0939\u0948 \u0915\u093f \u0906\u092a\u0915\u093e \u0926\u094b\u0938\u094d\u0924 \u0905\u092c \u0905\u092a\u0928\u0947 \u0926\u093f\u0928 \u0915\u094b \u0915\u0948\u0938\u0947 \u092c\u0928\u093e\u0928\u093e \u091a\u093e\u0939\u0947\u0917\u093e?
+2026-11-21 11:01:45,684 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:01:49,158 — \U0001f464 \u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u092a\u0924\u093e \u0938\u0940\u0930\u0940\u091c
+2026-11-21 11:01:49,182 — \U0001f50d wake check, text='\u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u092a\u0924\u093e \u0938\u0940\u0930\u0940\u091c'
+2026-11-21 11:01:49,480 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:01:54,469 — \u23f1\ufe0f no speech detected
+2026-11-21 11:01:54,505 — \U0001f50d wake check, text=''
+2026-11-21 11:01:54,844 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:01:56,755 — \U0001f464 (Vosk empty result)
+2026-11-21 11:01:56,776 — \U0001f50d wake check, text=''
+2026-11-21 11:01:57,096 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:01:59,253 — \U0001f464 \u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u092a\u0924\u093e \u0938\u0940\u0930\u0940\u091c
+2026-11-21 11:01:59,277 — \U0001f50d wake check, text='\u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u092a\u0924\u093e \u0938\u0940\u0930\u0940\u091c'
+2026-11-21 11:01:59,597 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:01,303 — \U0001f464 \u092c\u0924\u093e \u0938\u0915\u0924\u0940 \u0939\u094b
+2026-11-21 11:02:01,324 — \U0001f50d wake check, text='\u092c\u0924\u093e \u0938\u0915\u0924\u0940 \u0939\u094b'
+2026-11-21 11:02:01,625 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:08,269 — \U0001f464 \u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u092a\u0924\u093e
+2026-11-21 11:02:08,293 — \U0001f50d wake check, text='\u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u092a\u0924\u093e'
+2026-11-21 11:02:08,589 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:13,578 — \u23f1\ufe0f no speech detected
+2026-11-21 11:02:13,616 — \U0001f50d wake check, text=''
+2026-11-21 11:02:13,923 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:18,913 — \u23f1\ufe0f no speech detected
+2026-11-21 11:02:18,960 — \U0001f50d wake check, text=''
+2026-11-21 11:02:19,357 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:22,168 — \U0001f464 (Vosk empty result)
+2026-11-21 11:02:22,194 — \U0001f50d wake check, text=''
+2026-11-21 11:02:22,503 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:28,846 — \U0001f464 (Vosk empty result)
+2026-11-21 11:02:28,865 — \U0001f50d wake check, text=''
+2026-11-21 11:02:29,173 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:31,321 — \U0001f464 \u0924\u0941\u092e \u092c\u0924\u093e\u0913
+2026-11-21 11:02:31,342 — \U0001f50d wake check, text='\u0924\u0941\u092e \u092c\u0924\u093e\u0913'
+2026-11-21 11:02:31,630 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:36,621 — \u23f1\ufe0f no speech detected
+2026-11-21 11:02:36,669 — \U0001f50d wake check, text=''
+2026-11-21 11:02:36,976 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:38,781 — \U0001f464 (Vosk empty result)
+2026-11-21 11:02:38,800 — \U0001f50d wake check, text=''
+2026-11-21 11:02:39,120 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:41,637 — \U0001f464 (Vosk empty result)
+2026-11-21 11:02:41,659 — \U0001f50d wake check, text=''
+2026-11-21 11:02:41,974 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:46,664 — \U0001f464 \u0924\u0941\u092e \u092c\u0924\u093e\u0913 \u0938\u0940\u0930\u0940\u091c
+2026-11-21 11:02:46,689 — \U0001f50d wake check, text='\u0924\u0941\u092e \u092c\u0924\u093e\u0913 \u0938\u0940\u0930\u0940\u091c'
+2026-11-21 11:02:46,979 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:51,970 — \u23f1\ufe0f no speech detected
+2026-11-21 11:02:52,009 — \U0001f50d wake check, text=''
+2026-11-21 11:02:52,311 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:53,925 — \U0001f464 (Vosk empty result)
+2026-11-21 11:02:53,949 — \U0001f50d wake check, text=''
+2026-11-21 11:02:54,284 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:02:55,958 — \U0001f464 (Vosk empty result)
+2026-11-21 11:02:55,977 — \U0001f50d wake check, text=''
+2026-11-21 11:02:56,277 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:00,645 — \U0001f464 (Vosk empty result)
+2026-11-21 11:03:00,674 — \U0001f50d wake check, text=''
+2026-11-21 11:03:01,040 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:04,087 — \U0001f464 (Vosk empty result)
+2026-11-21 11:03:04,106 — \U0001f50d wake check, text=''
+2026-11-21 11:03:04,406 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:09,671 — \U0001f464 \u0928\u092e\u0938\u094d\u0924\u0947 \u0938\u0947 \u0930\u0939\u0940
+2026-11-21 11:03:09,708 — \U0001f50d wake check, text='\u0928\u092e\u0938\u094d\u0924\u0947 \u0938\u0947 \u0930\u0939\u0940'
+2026-11-21 11:03:10,020 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:17,499 — \U0001f464 (Vosk empty result)
+2026-11-21 11:03:17,519 — \U0001f50d wake check, text=''
+2026-11-21 11:03:17,826 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:22,816 — \u23f1\ufe0f no speech detected
+2026-11-21 11:03:22,854 — \U0001f50d wake check, text=''
+2026-11-21 11:03:23,235 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:24,990 — \U0001f464 (Vosk empty result)
+2026-11-21 11:03:25,020 — \U0001f50d wake check, text=''
+2026-11-21 11:03:25,416 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:26,614 — \U0001f464 (Vosk empty result)
+2026-11-21 11:03:26,633 — \U0001f50d wake check, text=''
+2026-11-21 11:03:26,930 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:32,189 — \U0001f464 (Vosk empty result)
+2026-11-21 11:03:32,209 — \U0001f50d wake check, text=''
+2026-11-21 11:03:32,530 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:37,083 — \U0001f464 (Vosk empty result)
+2026-11-21 11:03:37,103 — \U0001f50d wake check, text=''
+2026-11-21 11:03:37,416 — \U0001f3a4 Listening... (lang=hi-IN)
+2026-11-21 11:03:39,433 — \U0001f916 Goodbye!

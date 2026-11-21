@@ -10,7 +10,8 @@ import requests
 import random 
 import vosk
 import json
-
+import asyncio
+import edge_tts
 
 CURRENT_LANG = "en-IN"   # "en-IN" for English, "hi-IN" for Hindi
 HINDI_MODE = False        # ← new flag
@@ -42,7 +43,7 @@ logging.basicConfig(
     format="%(asctime)s — %(message)s"
 )
 try:
-    vosk_model_hi = vosk.Model("D:/voice-assistant/models/vosk-model-small-hi-0.22")
+    vosk_model_hi = vosk.Model("C:/voice-assistant/models/vosk-model-small-hi-0.22")
     logging.info("✅ Vosk Hindi model loaded")
 except Exception as e:
     logging.error(f"❌ Vosk model failed to load: {e}")
@@ -156,13 +157,55 @@ for i in range(_voices.Count):
         logging.info(f"🗣️ Using SAPI voice: {_voices.Item(i).GetDescription()}")
         break
 
+# Put this near your other setup code, at the top
+import io
+from pygame import mixer
+mixer.init()
 def speak(text):
     logging.info(f"🤖 {text}")
-    try:
-        _sapi.Speak(text)
-    except Exception as e:
-        logging.error(f"TTS error: {e}")
-    time.sleep(1.0)
+    
+    if HINDI_MODE:
+        voice = "hi-IN-SwaraNeural"
+        
+        async def _collect_tts():
+            communicate = edge_tts.Communicate(text, voice)
+            audio_buffer = io.BytesIO()
+            async for chunk in communicate.stream():
+                if chunk["type"] == "audio":
+                    audio_buffer.write(chunk["data"])
+            audio_buffer.seek(0)
+            return audio_buffer
+        
+        try:
+            audio_buffer = asyncio.run(_collect_tts())
+        except Exception as e:
+            logging.error(f"Edge TTS collect error: {e}")
+            try:
+                _sapi.Speak(text)
+            except:
+                pass
+            time.sleep(0.5)
+            return
+        
+        try:
+            mixer.music.load(audio_buffer)
+            mixer.music.play()
+            while mixer.music.get_busy():
+                time.sleep(0.1)
+            mixer.music.unload()
+        except Exception as e:
+            logging.error(f"pygame playback error: {e}")
+            try:
+                _sapi.Speak(text)
+            except:
+                pass
+    else:
+        try:
+            _sapi.Speak(text)
+        except Exception as e:
+            logging.error(f"TTS error: {e}")
+    
+    time.sleep(0.5)  
 
 def listen(timeout=5, phrase_time_limit=5):
     global CURRENT_LANG
