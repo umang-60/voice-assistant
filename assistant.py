@@ -12,21 +12,18 @@ import vosk
 import json
 import asyncio
 import edge_tts
+import os
 
-CURRENT_LANG = "en-IN"   # "en-IN" for English, "hi-IN" for Hindi
-HINDI_MODE = False        # ← new flag
+
 def ask_ollama(prompt):
-    """Sends a prompt to the local Ollama server and returns the answer."""
-    logging.info(f"🧠 Asking Ollama: {prompt}")
+    logging.info(f"🧠 Asking Ollama Local: {prompt}")
     try:
-        # Ollama's API endpoint
-        url = "http://localhost:11434/api/generate"
+        url = "http://127.0.0.1:11434/api/generate"
         payload = {
             "model": "llama3.2",
             "prompt": prompt,
-            "stream": False  # We want the full answer at once
+            "stream": False
         }
-        # Give it a generous timeout in case the model is slow to load
         response = requests.post(url, json=payload, timeout=60)
         response.raise_for_status()
         
@@ -35,26 +32,29 @@ def ask_ollama(prompt):
         return answer if answer else "I couldn't think of an answer."
         
     except Exception as e:
-        logging.error(f"Ollama Error: {e}")
-        return "Sorry, my local AI brain seems to be offline."
+        logging.error(f"Ollama Cloud Error: {e}")
+        return "Sorry, my cloud brain seems to be offline."
+CURRENT_LANG = "en-IN"   # "en-IN" for English, "hi-IN" for Hindi
+HINDI_MODE = False        # ← new flag
 logging.basicConfig(
     filename="assistant.log",
     level=logging.INFO,
     format="%(asctime)s — %(message)s"
 )
 try:
-    vosk_model_hi = vosk.Model("C:/voice-assistant/models/vosk-model-small-hi-0.22")
+    vosk_model_hi = vosk.Model("C:/voice-assistant/models/vosk-model-hi-0.22")
     logging.info("✅ Vosk Hindi model loaded")
 except Exception as e:
     logging.error(f"❌ Vosk model failed to load: {e}")
     vosk_model_hi = None
 # --- Chat personality ---
 CHAT_SYSTEM_PROMPT = (
-    "You are Siri, a friendly, warm, and playful female personal assistant. "
-    "You talk like a real girl — casual, natural, use contractions (I'm, you're, let's). "
-    "Keep replies short (1-3 sentences) because they will be spoken aloud. "
-    "Be encouraging, use light humor, and ask follow-up questions sometimes. "
-    "Never say you are an AI or a language model. Just be Siri."
+    "You are Siri, a friendly, witty, and warm female personal assistant. "
+    "You talk like a real girl in her 20s—casual, natural, and playful. "
+    "Use contractions (I'm, you're, let's). Keep replies SHORT (1-2 sentences) because they are spoken aloud. "
+    "Never say you are an AI or a language model. Never break character. "
+    "If the user seems sad, be comforting. If they joke, play along. "
+    "Ask a follow-up question only when it feels natural, not every time."
 )
 
 chat_history = []   # list of {"role": "user"/"assistant", "content": "..."}
@@ -62,7 +62,7 @@ chat_history = []   # list of {"role": "user"/"assistant", "content": "..."}
 def chat_with_siri(user_message):
     global chat_history, CURRENT_LANG, HINDI_MODE
     chat_history.append({"role": "user", "content": user_message})
-    chat_history = chat_history[-6:]
+    chat_history = chat_history[-12:]
 
     if HINDI_MODE:
         lang_instruction = "Reply in Hindi..."
@@ -80,7 +80,7 @@ def chat_with_siri(user_message):
     logging.info(f"💬 Chat prompt sent ({len(chat_history)} msgs, lang={CURRENT_LANG})")
     try:
         resp = requests.post(
-            "http://localhost:11434/api/generate",
+            "http://127.0.0.1:11434/api/generate",
             json={"model": "llama3.2", "prompt": prompt, "stream": False},
             timeout=60
         )
@@ -218,7 +218,6 @@ def listen(timeout=5, phrase_time_limit=5):
             if CURRENT_LANG == "hi-IN" and vosk_model_hi is not None:
                 raw_data = audio.get_raw_data(convert_rate=16000, convert_width=2)
                 rec = vosk.KaldiRecognizer(vosk_model_hi, 16000)
-                # Feed audio in chunks (Vosk expects small chunks)
                 chunk_size = 4000
                 for i in range(0, len(raw_data), chunk_size):
                     rec.AcceptWaveform(raw_data[i:i+chunk_size])
@@ -303,7 +302,7 @@ def handle_command(command):
     elif "sleep" in command or "stop listening" in command:
         speak("Going to sleep. Say siri to wake me.")
         return "SLEEP"
-    elif "stop" in command or "exit" in command or "quit" in command:
+    elif "stop" in command or "exit" in command or "quit" in command or "bye" in command:
         speak("Goodbye!")
         return "EXIT"
     elif "restart" in command or "reboot" in command:
